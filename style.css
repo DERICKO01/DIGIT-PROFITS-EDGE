@@ -1,0 +1,607 @@
+/* ==========================================================
+   DIGIT PROFITS EDGE
+   Main Stylesheet
+   ========================================================== */
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#081420;
+    color:#ffffff;
+    line-height:1.7;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+ul{
+    list-style:none;
+}
+
+/* ===========================
+   COLORS
+=========================== */
+
+:root{
+
+    --primary:#0d6efd;
+    --secondary:#00c853;
+    --gold:#FFD700;
+    --dark:#081420;
+    --card:#112240;
+    --white:#ffffff;
+    --gray:#d7d7d7;
+    --shadow:0 15px 35px rgba(0,0,0,.3);
+
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    background:#081420;
+    z-index:1000;
+    box-shadow:0 3px 12px rgba(0,0,0,.2);
+}
+
+.navbar{
+
+    max-width:1200px;
+    margin:auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px;
+
+}
+
+.logo h2{
+
+    color:var(--gold);
+    font-size:30px;
+    font-weight:700;
+
+}
+
+.nav-links{
+
+    display:flex;
+    gap:35px;
+
+}
+
+.nav-links a{
+
+    color:white;
+    font-weight:500;
+    transition:.3s;
+
+}
+
+.nav-links a:hover{
+
+    color:var(--gold);
+
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.btn{
+
+    background:var(--primary);
+    color:white;
+    padding:14px 28px;
+    border-radius:8px;
+    transition:.3s;
+    font-weight:600;
+    display:inline-block;
+
+}
+
+.btn:hover{
+
+    background:var(--secondary);
+    transform:translateY(-3px);
+
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    padding:120px 20px;
+
+    background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.75)),
+    url("../images/hero.jpg") center/cover;
+
+}
+
+.hero-content{
+
+    max-width:900px;
+
+}
+
+.hero h1{
+
+    font-size:60px;
+    color:var(--gold);
+    margin-bottom:20px;
+
+}
+
+.hero p{
+
+    font-size:20px;
+    color:#ddd;
+    margin-bottom:35px;
+
+}
+
+/* ===========================
+   SECTIONS
+=========================== */
+
+section{
+
+    padding:90px 8%;
+
+}
+
+section h2{
+
+    text-align:center;
+    font-size:40px;
+    color:var(--gold);
+    margin-bottom:25px;
+
+}
+
+section p{
+
+    text-align:center;
+    max-width:850px;
+    margin:auto;
+
+}
+
+/* ===========================
+   FEATURES
+=========================== */
+
+.feature-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(260px,1fr));
+
+    gap:30px;
+
+    margin-top:50px;
+
+}
+
+.card{
+
+    background:var(--card);
+    padding:35px;
+    border-radius:15px;
+    text-align:center;
+
+    transition:.35s;
+
+    box-shadow:var(--shadow);
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.card i{
+
+    font-size:55px;
+    color:var(--gold);
+    margin-bottom:20px;
+
+}
+
+.card h3{
+
+    margin-bottom:15px;
+    color:white;
+
+}
+
+.card p{
+
+    color:#ccc;
+
+}
+
+/* ===========================
+   COURSES
+=========================== */
+
+.course-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+    margin-top:50px;
+
+}
+
+.course{
+
+    background:var(--card);
+
+    padding:35px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    transition:.3s;
+
+}
+
+.course:hover{
+
+    transform:scale(1.04);
+
+}
+
+.course h3{
+
+    color:var(--gold);
+
+}
+
+.course h4{
+
+    margin:20px 0;
+
+    color:var(--secondary);
+
+    font-size:28px;
+
+}
+
+.course button{
+
+    border:none;
+
+    padding:14px 30px;
+
+    background:var(--primary);
+
+    color:white;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.course button:hover{
+
+    background:var(--secondary);
+
+}
+
+/* ===========================
+   STATS
+=========================== */
+
+.stats{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:30px;
+
+    text-align:center;
+
+}
+
+.stat{
+
+    background:var(--card);
+
+    padding:40px;
+
+    border-radius:15px;
+
+}
+
+.stat h2{
+
+    color:var(--gold);
+
+    font-size:45px;
+
+}
+
+.stat p{
+
+    color:#ddd;
+
+}
+
+/* ===========================
+   CONTACT
+=========================== */
+
+form{
+
+    max-width:700px;
+
+    margin:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+input,
+textarea{
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#1b304b;
+
+    color:white;
+
+    font-size:16px;
+
+}
+
+textarea{
+
+    resize:none;
+
+}
+
+form button{
+
+    padding:18px;
+
+    border:none;
+
+    background:var(--secondary);
+
+    color:white;
+
+    font-size:18px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+form button:hover{
+
+    background:var(--primary);
+
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+
+    background:#050d16;
+
+    text-align:center;
+
+    padding:40px 20px;
+
+}
+
+footer h2{
+
+    color:var(--gold);
+
+    margin-bottom:10px;
+
+}
+
+.socials{
+
+    margin:25px 0;
+
+}
+
+.socials a{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:50%;
+
+    background:#112240;
+
+    margin:10px;
+
+    transition:.3s;
+
+}
+
+.socials a:hover{
+
+    background:var(--primary);
+
+    transform:translateY(-5px);
+
+}
+
+.socials i{
+
+    color:white;
+
+    font-size:22px;
+
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--gold);
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#081420;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:900px){
+
+.navbar{
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.nav-links{
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+}
+
+.hero h1{
+
+    font-size:42px;
+
+}
+
+.hero p{
+
+    font-size:18px;
+
+}
+
+section h2{
+
+    font-size:32px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.hero h1{
+
+    font-size:34px;
+
+}
+
+.hero{
+
+    padding:140px 20px;
+
+}
+
+.btn{
+
+    padding:12px 22px;
+
+}
+
+.card,
+.course,
+.stat{
+
+    padding:25px;
+
+}
+
+}
