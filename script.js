@@ -21,7 +21,13 @@ function subscribeV75() {
         subscribe: 1
     }));
 }
+const loginBtn = document.getElementById("loginBtn");
 
+if (loginBtn) {
+    loginBtn.addEventListener("click", () => {
+        alert("Deriv login will be connected in the next step.");
+    });
+}
 socket.onopen = () => {
     subscribeV75();
 };
