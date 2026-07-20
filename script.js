@@ -4,7 +4,7 @@
    ============================================ */
 
 // Replace with your own App ID locally
-const DERIV_APP_ID = "YOUR_APP_ID";
+const DERIV_APP_ID = "CR7229316";
 
 const ws = new WebSocket(
     `wss://ws.derivws.com/websockets/v3?app_id=${DERIV_APP_ID}`
