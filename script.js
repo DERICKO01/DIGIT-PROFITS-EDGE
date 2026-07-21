@@ -1,5 +1,5 @@
 // Configuration
-const DERIV_APP_ID = "YOUR_DERIV_APP_ID"; // Replace with your actual numeric App ID
+const  /const APP_ID = "33SBsW7aBtu6hgWpXKFi4";/ Replace with your actual numeric App ID
 
 const socket = new WebSocket(
     `wss://ws.derivws.com/websockets/v3?app_id=${DERIV_APP_ID}`
