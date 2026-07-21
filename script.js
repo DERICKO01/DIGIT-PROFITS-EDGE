@@ -1,35 +1,41 @@
 // Configuration
-const  /const APP_ID = "33SBsW7aBtu6hgWpXKFi4";/ Replace with your actual numeric App ID
+const DERIV_APP_ID = "33SBsW7aBtu6hgWpXKFi4";
 
+// Connect to Deriv WebSocket
 const socket = new WebSocket(
-    `wss://ws.derivws.com/websockets/v3?app_id=${DERIV_APP_ID}`
+  `wss://ws.derivws.com/websockets/v3?app_id=${DERIV_APP_ID}`
 );
 
+// When connected
 socket.onopen = () => {
-    console.log("Connected to Deriv");
+  console.log("Connected to Deriv");
+  subscribeV75();
 };
 
+// Receive messages
 socket.onmessage = (event) => {
-    const data = JSON.parse(event.data);
-    console.log(data);
+  const data = JSON.parse(event.data);
+  console.log(data);
 };
 
-// Example: Subscribe to Volatility 75
+// Subscribe to Volatility 75 ticks
 function subscribeV75() {
-    socket.send(JSON.stringify({
-        ticks: "R_75",
-        subscribe: 1
-    }));
+  socket.send(
+    JSON.stringify({
+      ticks: "R_75",
+      subscribe: 1
+    })
+  );
 }
+
+// Login button
 const loginBtn = document.getElementById("loginBtn");
 
 if (loginBtn) {
-    loginBtn.addEventListener("click", () => {
-        alert("Deriv login will be connected in the next step.");
-    });
+  loginBtn.addEventListener("click", () => {
+    alert("Deriv login will be connected in the next step.");
+  });
 }
-socket.onopen = () => {
-    subscribeV75();
-};
+
 
  
